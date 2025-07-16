@@ -1,5 +1,6 @@
 <template>
-    <h1>Hello World from SFC(single file component)</h1>
+    <h1>簡單課程管理系統</h1>
+    <new-course></new-course>
     <ul>
         <course-intro v-for="course in courses" :key="course.id" :id="course.id" :name="course.name"
             :duration="course.duration" :current="course.current"  @toggle-current="toggleCurrentStatus"></course-intro>

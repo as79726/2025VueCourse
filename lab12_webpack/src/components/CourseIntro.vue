@@ -12,6 +12,16 @@
 
 <script>
 export default {
+    emits:{
+        "toggle-current": function (id) {
+            if (id) {
+                return true
+            } else {
+                console.log("toggle-current should provide id, id missing!!")
+                return false
+            }
+        }
+    },
     props: {
         id: { type: String, required: true },
         name: { type: String, required: true },
