@@ -7,3 +7,5 @@ const emitter = mitt();
 const app = createApp(App);
 app.component("course-intro", CourseIntro);
 app.config.globalProperties.emitter = emitter;
+
+app.mount('#app')
