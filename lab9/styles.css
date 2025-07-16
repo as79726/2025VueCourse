@@ -1,0 +1,21 @@
+.demo {
+    width: calc(80%-32px);
+    height: 80px;
+    margin: 12px;
+    border: 4px dashed #CCC;
+}
+
+.is1Selected {
+    border-color: green;
+    background-color: #C0FFEE;
+}
+
+.is2Selected {
+    border-color: blue;
+    background-color: #C0EEFF;
+}
+
+.is3Selected {
+    border-color: red;
+    background-color: #FFC0EE;
+}

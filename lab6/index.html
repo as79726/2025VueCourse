@@ -19,6 +19,32 @@
         <button @click="add(2)">+2</button>
         <button @click="reduce(2)">-2</button>
         <p>Counter1:{{counter1}}</p>
+        <p>constant:{{1+2}}</p>
+        <hr />
+        <input type="text" v-on:input="setToDo($event,'我想要')" />
+        <p>What you expected to do:{{todo}}</p>
+        <hr />
+        <p>表單1</p>
+        <form v-on:submit="submitForm">
+            <input type="text">
+            <button type="text">Sign Up</button>
+        </form>
+        <br />
+        <p>表單2</p>
+        <form v-on:submit.prevent="submitForm2">
+            <input type="text">
+            <button type="text">Sign Up2</button>
+        </form>
+        <hr />
+        <input type="text" v-on:input="setUrgent" v-on:keyup.enter="commitUrgent">
+        <p>Current urgent issue:{{urgent}}</p>
+        <p>Committed urgent issue:{{checkedUrgent}}</p>
+        <hr />
+        <p>目前的值:{{counter2}}</p>
+        <p v-once>初始值:{{counter2}}</p>
+        <button v-on:click="add(4)">+4</button>
+        <button v-on:click="reduce(4)">-4</button>
+
     </section>
 
     <script src="/lab6/app.js" async defer></script>

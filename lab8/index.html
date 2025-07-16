@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h1>two way binding!</h1>
+    <section id="app">
+        <input type="text" v-model="issue" />
+        <p>your issue is:{{issue}}</p>
+        <p>counter={{counter}}</p>
+        <p>{{formatIssue}}</p>
+        <button @click="resetIssue">clear issue</button>
+        <button @click="increase">+1</button>
+    </section>
+    <script src="/lab8/app.js" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <section id="app">
+        <!-- <div class="demo" :style="{borderColor:div1Selected?'green':'#CCC'}" @click="divSelected(1)">Mountain</div>
+        <div class="demo" :style="{borderColor:div2Selected?'blue':'#CCC'}" @click="divSelected(2)">Ocean</div>
+        <div class="demo" :style="{borderColor:div3Selected?'red':'#CCC'}" @click="divSelected(3)">Sun</div> -->
+        <!-- <div :class="div1Selected?'demo is1Selected':'demo'"  @click="divSelected(1)">Mountain</div>
+        <div :class="div2Selected?'demo is2Selected':'demo'"  @click="divSelected(2)">Ocean</div>
+        <div :class="div3Selected?'demo is3Selected':'demo'"  @click="divSelected(3)">Sun</div> -->
+
+        <!-- <div :class="{demo:true, is1Selected:div1Selected}" @click="divSelected(1)">Mountain</div>
+        <div :class="{demo:true, is2Selected:div2Selected}" @click="divSelected(2)">Ocean</div>
+        <div :class="{demo:true, is3Selected:div3Selected}" @click="divSelected(3)">Sun</div> -->
+
+        <!--<div class="demo" :class="div1Classes" @click="divSelected(1)">Mountain</div>
+        <div class="demo" :class="div2Classes" @click="divSelected(2)">Ocean</div>
+        <div class="demo" :class="div3Classes" @click="divSelected(3)">Sun</div>-->
+        <div :class="['demo', div1Classes]" @click="divSelected(1)">Mountain</div>
+        <div :class="['demo', div2Classes]" @click="divSelected(2)">Ocean</div>
+        <div :class="['demo', div3Classes]" @click="divSelected(3)">Sun</div>
+
+        <div :class="['demo', {is1Selected:div1Selected}]" @click="divSelected(1)">Mountain</div>
+        <div :class="['demo', {is2Selected:div2Selected}]" @click="divSelected(2)">Ocean</div>
+        <div :class="['demo', {is3Selected:div3Selected}]" @click="divSelected(3)">Sun</div>
+    </section>
+    <script src="/lab9/app.js" async defer></script>
+</body>
+
+</html>
