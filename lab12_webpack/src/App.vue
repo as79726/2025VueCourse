@@ -11,6 +11,14 @@
 
 <script>
 export default {
+    created() {
+        console.log("app元件被呼叫, 初始化中...")
+        this.emitter.on('toggle-current', idx => {
+            const course = this.courses.find(course => course.id === idx)
+            course.current = !course.current
+            console.log(`已變更${idx}的current state`)
+        })
+    },
     data() {
         return {
             courses: [{ id: "poop", name: "python oop", duration: 35, current: true },
