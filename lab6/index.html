@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h1>event binding</h1>
+    <section id="app">
+        <button @click="add(1)">+1</button>
+        <button @click="reduce(1)">-1</button>
+        <button @click="add(2)">+2</button>
+        <button @click="reduce(2)">-2</button>
+        <p>Counter1:{{counter1}}</p>
+    </section>
+
+    <script src="/lab6/app.js" async defer></script>
+</body>
+
+</html>

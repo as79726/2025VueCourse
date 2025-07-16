@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div id="myapp">
+        <label for="plan">Plan</label>
+        <input type="text" id="plan" v-model="value" />
+        <button @click="addPlan">Add Plan</button>
+        <ul>
+            <li v-for="item in plans">{{item}}</li>
+            </template>
+        </ul>
+    </div>
+    <script  src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="/lab3/app.js" async defer></script>
+</body>
+
+</html>
