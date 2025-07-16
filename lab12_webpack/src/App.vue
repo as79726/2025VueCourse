@@ -1,6 +1,6 @@
 <template>
     <h1>簡單課程管理系統</h1>
-    <new-course></new-course>
+    <new-course  @add-course="addCourse"></new-course>
     <ul>
         <course-intro v-for="course in courses" :key="course.id" :id="course.id" :name="course.name"
             :duration="course.duration" :current="course.current"  @toggle-current="toggleCurrentStatus"></course-intro>
@@ -25,6 +25,10 @@ export default {
              const course = this.courses.find(c => c.id === id)
             course.current = !course.current
             console.log(`course with id:${id}  changed `)
+        },
+        addCourse(id, name, duration) {
+            const newCourse = { id: id, name: name, duration: duration, current: false };
+            this.courses.push(newCourse);
         }
     }
 }
@@ -36,7 +40,8 @@ export default {
     list-style: none;
 }
 
-#app li {
+#app li,
+#app form {
     box-shadow: 0 4px 8px rgba(0, 0, 128, 0.26);
     margin: 1rem auto;
     border-radius: 5px;
