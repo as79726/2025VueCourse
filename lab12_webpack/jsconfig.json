@@ -16,5 +16,7 @@
       "scripthost"
     ]
   },
-  "include":["./src/**/*"]
+  "include": [
+    "./src/**/*"
+  ]
 }
