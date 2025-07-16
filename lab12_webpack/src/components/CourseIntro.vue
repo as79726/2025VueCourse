@@ -3,6 +3,8 @@
         <h2>{{ id }}-Current:{{ current }}-isCurrent:{{ isCurrent }}</h2>
         <button @click="toggleCourseDetail">show detail</button>
         <button @click="toggleCurrent">toggle isCurrent status</button>
+        <br/>
+        <button @click="deleteCourse">Delete</button>
         <ul v-if="detailsVisible">
             <li>{{ name }}</li>
             <li>{{ duration }}</li>
@@ -18,6 +20,14 @@ export default {
                 return true
             } else {
                 console.log("toggle-current should provide id, id missing!!")
+                return false
+            }
+        },
+        "delete-current": function (id) {
+            if (id) {
+                return true
+            } else {
+                console.log("delete-current should provide id, id missing!!")
                 return false
             }
         }
@@ -45,7 +55,11 @@ export default {
         toggleCurrent() {
             //this.isCurrent = !this.isCurrent;
              this.$emit('toggle-current', this.id)
+        },
+        deleteCourse() {
+            this.$emit("delete-current", this.id)
         }
+
     }
 }
 </script>

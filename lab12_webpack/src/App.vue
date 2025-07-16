@@ -3,7 +3,7 @@
     <new-course  @add-course="addCourse"></new-course>
     <ul>
         <course-intro v-for="course in courses" :key="course.id" :id="course.id" :name="course.name"
-            :duration="course.duration" :current="course.current"  @toggle-current="toggleCurrentStatus"></course-intro>
+            :duration="course.duration" :current="course.current"  @toggle-current="toggleCurrentStatus"  @delete-current="deleteCourse"></course-intro>
        <!-- <course-intro id="poop" name="python and oop" :duration=35 :current=true></course-intro>
         <course-intro id="bdpy" name="python and big data" :duration=42 :current=false></course-intro>
         <course-intro id="pykt" name="python and big data" :duration=8></course-intro> -->
@@ -29,6 +29,9 @@ export default {
         addCourse(id, name, duration) {
             const newCourse = { id: id, name: name, duration: duration, current: false };
             this.courses.push(newCourse);
+        },
+        deleteCourse(id){
+            this.courses = this.courses.filter(course=>course.id !== id);
         }
     }
 }
